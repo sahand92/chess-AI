@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	    <style>
+	    	input[name=text]{
+  			width: 20%;
+  			height: 20px;
+  			align-items: center;
+    		justify-content: center;
+  			font-size: 10px;
+  			display: inline;
+			   }
+			input[type=submit]{
+  			font-size: 6px;
+  			display: inline;
+    		align-items: center;
+    		justify-content: center;
+
+	    </style>
+</head>
+<body>
+
+	<div class="col-auto"><p style="font-size:12px">Self-play</p></div>
+	<div class="col-auto">
+		<svg width=30% height=30% xmlns={{ svg_img }}</svg><br>
+	</div>
+
+
+	<form method="POST">
+		<div class="col-auto">
+			<input name="text" id="textbox" class="form-control" autocomplete="off">
+			<input type="submit" id="submit-button" class="btn btn-outline-secondary btn-sm">
+		</div>
+	</form>
+	<form method="POST">
+		<div class="col-auto">
+			<input type="submit" value="reset" name="reset" class="btn btn-outline-secondary btn-sm">
+		</div>
+	</form>
+
+
+	<div class="col-auto" id="msg"><p style="font-size:8px">{{ text }}</p></div>
+	<div class="col-auto"><p id="content"></p></div>
+
+	<script>
+		var btn=document.getElementById("submit-button");
+
+
+		btn.onclick=function(){
+			{
+			var messCon = document.createElement("div");
+			var log=document.getElementById("textbox");
+			content.innerHTML=log.value;
+			}
+		}
+	</script>
+</body>
+</html>
