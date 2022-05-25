@@ -18,12 +18,11 @@
   			display: inline;
     		align-items: center;
     		justify-content: center;
-
 	    </style>
 </head>
 <body>
 
-	<div class="col-auto"><p style="font-size:12px">Self-play</p></div>
+	<div class="col-auto" style="font-size:10px">Live board: {{ evaluation }}</div>
 	<div class="col-auto">
 		<svg width=30% height=30% xmlns={{ svg_img }}</svg><br>
 	</div>
@@ -43,19 +42,7 @@
 
 
 	<div class="col-auto" id="msg"><p style="font-size:8px">{{ text }}</p></div>
-	<div class="col-auto"><p id="content"></p></div>
+	<div class="col-auto" id="msg"><p style="font-size:6px">Legal moves: {{ legal_text }}</p></div>
 
-	<script>
-		var btn=document.getElementById("submit-button");
-
-
-		btn.onclick=function(){
-			{
-			var messCon = document.createElement("div");
-			var log=document.getElementById("textbox");
-			content.innerHTML=log.value;
-			}
-		}
-	</script>
 </body>
 </html>
