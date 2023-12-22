@@ -5,7 +5,7 @@
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 	    <style>
-	    	input[name=text]{
+	    	input[name=requested_move]{
   			width: 20%;
   			height: 20px;
   			align-items: center;
@@ -24,16 +24,23 @@
 
 	<div class="col-auto" style="font-size:10px">Live board: {{ evaluation }}</div>
 	<div class="col-auto">
-		<svg width=30% height=30% xmlns={{ svg_img }}</svg><br>
+		<svg width=30% height=30% xmlns={{ svg_img|safe }}</svg><br>
 	</div>
 
 
 	<form method="POST">
 		<div class="col-auto">
-			<input name="text" id="textbox" class="form-control" autocomplete="off">
-			<input type="submit" id="submit-button" class="btn btn-outline-secondary btn-sm">
+			<input name="requested_move" id="textbox" class="form-control" autocomplete="off">
+			<input type="submit" id="submit-button-request" value="Submit move" class="btn btn-outline-secondary btn-sm">
 		</div>
 	</form>
+
+	<form method="POST">
+		<div class="col-auto">
+			<input type="submit" name="AI move" id="submit-button-AI" value="AI move" class="btn btn-outline-secondary btn-sm">
+		</div>
+	</form>
+
 	<form method="POST">
 		<div class="col-auto">
 			<input type="submit" value="reset" name="reset" class="btn btn-outline-secondary btn-sm">
