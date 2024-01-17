@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/html">
+
 <head>
 	<!-- Bootstrap CSS -->
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -20,9 +21,9 @@
     		justify-content: center;
 	    </style>
 </head>
-<body>
+<body style="background-color:  #252526;">
 
-	<div class="col-auto" style="font-size:10px">Live board: {{ evaluation }}</div>
+	<div class="col-auto" style="font-size:10px; color: #bcbec4;">Live board: {{ evaluation }}</div>
 	<div class="col-auto">
 		<svg width=30% height=30% xmlns={{ svg_img|safe }}</svg><br>
 	</div>
@@ -48,8 +49,8 @@
 	</form>
 
 
-	<div class="col-auto" id="msg"><p style="font-size:8px">{{ text }}</p></div>
-	<div class="col-auto" id="msg"><p style="font-size:6px">Legal moves: {{ legal_text }}</p></div>
+	<div class="col-auto" id="msg"><p style="font-size:8px; color: #bcbec4;">{{ text }}</p></div>
+	<div class="col-auto" id="msg"><p style="font-size:8px; color: #bcbec4;">Legal moves: {{ legal_text }}</p></div>
 
 </body>
 </html>
